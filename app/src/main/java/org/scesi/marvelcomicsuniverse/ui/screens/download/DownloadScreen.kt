@@ -1,9 +1,8 @@
-package org.scesi.marvelcomicsuniverse.ui.screens.home
+package org.scesi.marvelcomicsuniverse.ui.screens.download
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
@@ -18,7 +17,7 @@ import org.scesi.marvelcomicsuniverse.ui.navigation.NavRoutes
 import org.scesi.marvelcomicsuniverse.ui.theme.MarvelComicsUniverseTheme
 
 @Composable
-fun HomeScreen(
+fun DownloadScreen(
     navHostController: NavHostController
 ) {
     MarvelComicsUniverseTheme {
@@ -30,9 +29,9 @@ fun HomeScreen(
                 contentAlignment = Alignment.Center
             ) {
                 Column {
-                    Text(text = "HomeScreen")
-                    Button(onClick = {navHostController.navigate(NavRoutes.DOWNLOAD_SCREEN)}) {
-                        Text(text = "Downloads")
+                    Text(text = "DownloadScreen")
+                    Button(onClick = {navHostController.navigate(NavRoutes.HOME_SCREEN)}) {
+                        Text(text = "Home")
                     }
                 }
             }
@@ -42,7 +41,7 @@ fun HomeScreen(
 
 @Composable
 @Preview(showBackground = true, showSystemUi = true)
-fun HomeScreenPreview() {
+fun DownloadScreenPreview() {
     val navHostController = rememberNavController()
-    HomeScreen(navHostController)
+    DownloadScreen(navHostController)
 }
