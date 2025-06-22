@@ -1,5 +1,8 @@
 package org.scesi.marvelcomicsuniverse.ui.components
 
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.NavigationBar
@@ -13,15 +16,20 @@ import org.scesi.marvelcomicsuniverse.ui.theme.MarvelComicsUniverseTheme
 
 @Composable
 fun BottomBarNav() {
-    NavigationBar(
+    Box(
         modifier = Modifier
-            .padding(start = 16.dp, end = 16.dp, bottom = 16.dp)
+            .fillMaxWidth()
+            .navigationBarsPadding()
+            .padding(start = 16.dp, end = 16.dp, bottom = 8.dp)
             .clip(RoundedCornerShape(24.dp))
     ) {
-        NavigationBarItem(
-            selected = true,
-            onClick = { },
-            icon = { })
+        NavigationBar {
+            NavigationBarItem(
+                selected = true,
+                onClick = { },
+                icon = { }
+            )
+        }
     }
 }
 
