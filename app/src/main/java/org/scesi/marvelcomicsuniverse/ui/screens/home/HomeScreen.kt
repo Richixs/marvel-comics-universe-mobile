@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import org.scesi.marvelcomicsuniverse.ui.components.BottomBarNav
 import org.scesi.marvelcomicsuniverse.ui.navigation.NavRoutes
 import org.scesi.marvelcomicsuniverse.ui.theme.MarvelComicsUniverseTheme
 
@@ -21,27 +22,19 @@ import org.scesi.marvelcomicsuniverse.ui.theme.MarvelComicsUniverseTheme
 fun HomeScreen(
     navHostController: NavHostController
 ) {
-    MarvelComicsUniverseTheme {
-        Scaffold { innerPadding ->
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(innerPadding),
-                contentAlignment = Alignment.Center
-            ) {
-                Column {
-                    Text(text = "HomeScreen")
-                    Button(onClick = {navHostController.navigate(NavRoutes.DOWNLOAD_SCREEN)}) {
-                        Text(text = "Downloads")
-                    }
-                }
-            }
+    Box(
+        modifier = Modifier
+            .fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ) {
+        Column {
+            Text(text = "HomeScreen")
         }
     }
 }
 
 @Composable
-@Preview(showBackground = true, showSystemUi = true)
+@Preview(showBackground = true)
 fun HomeScreenPreview() {
     val navHostController = rememberNavController()
     HomeScreen(navHostController)
