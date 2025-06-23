@@ -10,6 +10,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import org.scesi.marvelcomicsuniverse.ui.components.BottomBarNav
+import org.scesi.marvelcomicsuniverse.ui.components.TopBar
 import org.scesi.marvelcomicsuniverse.ui.theme.MarvelComicsUniverseTheme
 import org.scesi.marvelcomicsuniverse.ui.navigation.Navigation
 
@@ -21,6 +22,7 @@ class MainActivity : ComponentActivity() {
             val navController = rememberNavController()
             MarvelComicsUniverseTheme {
                 Scaffold(
+                    topBar = { TopBar() },
                     bottomBar = { BottomBarNav(navController) }
                 ) { innerPadding ->
                     Box(modifier = Modifier.padding(innerPadding)) {
