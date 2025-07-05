@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MarvelComicsUniverse"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.marvel.api.PUBLIC_KEY"
+            android:value="@string/marvel_api_public_key" />
+        <meta-data
+            android:name="com.google.android.marvel.api.PRIVATE_KEY"
+            android:value="@string/marvel_api_private_key" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
