@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
@@ -25,7 +26,12 @@ class MainActivity : ComponentActivity() {
                     topBar = { TopBar() },
                     bottomBar = { BottomBarNav(navController) }
                 ) { innerPadding ->
-                    Box(modifier = Modifier.padding(innerPadding)) {
+                    Box(
+                        modifier = Modifier.padding(
+                            top = innerPadding.calculateTopPadding(),
+                            bottom = innerPadding.calculateBottomPadding() / 2
+                        )
+                    ) {
                         Navigation(navController)
                     }
                 }
