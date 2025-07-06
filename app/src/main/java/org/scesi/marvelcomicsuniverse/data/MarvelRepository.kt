@@ -1,6 +1,8 @@
-package org.scesi.marvelcomicsuniverse.data.remote.api
+package org.scesi.marvelcomicsuniverse.data
 
 import org.scesi.marvelcomicsuniverse.BuildConfig
+import org.scesi.marvelcomicsuniverse.data.remote.api.ApiClient
+import org.scesi.marvelcomicsuniverse.data.remote.api.AuthHelper
 import org.scesi.marvelcomicsuniverse.data.remote.model.Character
 import org.scesi.marvelcomicsuniverse.data.remote.model.MarvelResponse
 import retrofit2.Response
