@@ -9,8 +9,6 @@ Esta aplicación se conecta a la API oficial de Marvel para obtener datos actual
 ## Características Principales
 
 *   Listado de personajes, cómics y series.
-*   Búsqueda de contenido específico.
-*   Visualización de detalles, incluyendo descripciones, imágenes y apariciones.
 
 ## Tecnologías Utilizadas
 
@@ -36,6 +34,10 @@ El proyecto sigue una arquitectura MVVM (Model-View-ViewModel) y está organizad
 - [ ] Soporte para offline caching utilizando **Room**.
 - [ ] Implementar tests unitarios y de instrumentación.
 - [ ] Integración con **Firebase** para funcionalidades adicionales (ej. autenticación, notificaciones push).
+- [ ] Búsqueda de contenido específico.
+- [ ] Visualización de detalles, incluyendo descripciones, imágenes y apariciones.
+
+
 
 ## Requisitos Previos
 
